@@ -1,0 +1,12 @@
+<md-menu md-position-mode="target-right bottom">
+    <md-button id={{trigger}} style="z-index:100 !important;" ng-mouseleave="checkToCloseProductMenu($event)" ng-mouseenter="openProductMenu($mdOpenMenu,$event)" ng-style="productStyle">
+        PRODUCTS
+    </md-button>
+    <md-menu-content id={{menu}} width="4" ng-mouseleave="checkToCloseProductMenu($event)" style="background-color:rgba(255,255,255,0.88) !important">
+        <md-menu-item ng-repeat="item in items">
+            <md-button md-no-focus-style="false" class="menuButton">
+                {{item}}
+            </md-button>
+        </md-menu-item>
+    </md-menu-content>
+</md-menu>

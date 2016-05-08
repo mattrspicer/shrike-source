@@ -1,0 +1,193 @@
+html {
+    background-color: white;
+}
+
+.header {
+    min-height:12%;
+    max-height: 12%;
+    background-color: #222222;
+    padding:0px;
+    margin:0px;
+    display:inline-block;
+}
+
+.md-button.arrowButton {
+    background-color: #959595;
+    min-width: 40px !important;
+    width: 6%;
+    position:absolute;
+    z-index: 2;
+    opacity:1.0;
+    display:inline-block;
+    padding: 0;
+    margin:0;
+    height:100%;
+}
+
+#leftSliderArrow {
+    left:0px;
+}
+
+#rightSliderArrow {
+    right:0;
+}
+
+.md-button.headerButton {
+    width:100%;
+    background-color: #222222;
+    color: white;
+    height:45px;
+}
+
+.headerButtonText {
+    font-family: 'PT Sans';
+    font-size: 20px;
+}
+
+.md-button.headerButton:hover {
+    background-color: #68160D;
+}
+
+.md-button.menuButton {
+    font-family: 'PT Sans';
+    font-size: 20px;
+    color: #68160D;
+}
+
+.md-button.menuButton:hover {
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+#cart {
+    height:45px;
+}
+
+#logo {
+    padding-left: 12%;
+    max-height: 63px; /*should be the same height as header*/
+}
+
+.arrow {
+    width: 20px;
+}
+
+.slider {
+    width:100%;
+    min-height:55%;
+    margin: 0 auto;
+    position: relative;
+    padding:0px;
+    display:inline-block;
+}
+
+.slide {
+    width:100%;
+    margin: 0 auto;
+    position:relative;
+    display:inline-block;
+    z-index: 1;
+}
+
+.contentModules {
+    width:100%;
+    margin: 0 auto; 
+    padding-top:5%;
+    padding-left:6%;
+    padding-right:6%;
+}
+
+.contentBox  {
+    height:100%;
+    min-height: 450px;
+    position: relative;
+}
+
+.contentTitle {
+    font-family: 'PT Sans';
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing:3px;
+    color: #68160D;
+}
+
+.contentText {
+    padding-top:20px;
+    font-family: 'PT Sans';
+    font-size: 16px;
+    color: #323131;
+    max-width:85%;
+}
+
+.contentSubheader {
+    font-family: 'PT Sans';
+    font-size: 16px;
+    font-style: italic;
+    /*font-weight: bold;*/
+    color:#959595;
+}
+
+.md-button.contentButton {
+    background-color: #959595;
+    color: white;
+    position: absolute;
+    margin-left:0;
+    padding:0px;
+    bottom:0;
+    min-height:50px;
+    font-style: italic;
+}
+
+.contentButtonText {
+    font-family: 'PT Sans';
+    font-size: 16px;
+    padding:25px;
+}
+
+.footer {
+    height:14%;
+}
+
+.footer-divider {
+    /*padding-top:5%;*/
+    min-height:3%;
+    background-color: #222222;
+}
+
+.socialMediaButton {
+    min-height:35px;
+    height:35px;
+    min-width:35px;
+    width:35px;
+}
+
+#facebook {
+    right:80%;
+    position:absolute;
+}
+
+#video {
+    padding-top:20px;
+    max-width:80%;
+    min-height:100px;
+}
+
+#aboutHeader {
+    padding-bottom:6%;
+}
+
+#mobileHome { 
+     height:100%;
+     width:100%;
+ }
+ 
+.md-button.mobileMenuButton {
+    min-width:200px;
+    max-width:200px;
+    min-height: 200px;
+    max-height: 200px;
+}
+ 
+#hamburger {
+    height:100%;
+    width:100%;
+}

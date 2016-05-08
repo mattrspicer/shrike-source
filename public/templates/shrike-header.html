@@ -1,0 +1,19 @@
+<div class="header" layout="row" layout-align="center center" flex="noshrink">
+    <div flex="70">
+        <a href='../views/home.html'><img src="../images/logo1.png" alt="logo" id="logo"></a>
+    </div>
+    <div flex="15">
+        <md-button class="headerButton" ng-click="toAbout()">
+            <span class="headerButtonText">ABOUT</span>
+        </md-button>
+    </div>
+    <dropdown-nav-menu items="['PEGS', 'PLATES', 'BAGS']" trigger="'productButton'" menu="'productMenu'" flex="15"></dropdown-nav-menu>
+    <div flex="15">
+        <md-button class="headerButton" ng-click="toGallery()">
+            <span class="headerButtonText">GALLERY</span>
+        </md-button>
+    </div>
+    <md-button id="cart" ng-click="toCart()">
+        <img src="../images/shoppingbag.png" id="cart">
+    </md-button>
+</div>
