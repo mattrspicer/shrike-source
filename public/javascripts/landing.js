@@ -28,7 +28,7 @@ landingModule.controller('landing_controller', function($scope, $mdMenu, $window
     $scope.submit = function() {
       var post_user = $http({
         method: "post",
-        url: "https://shrike-mounts-dev-mattrspicer.c9users.io/trialusers",
+        url: './trialusers',
         data: {
           email: $scope.user.email,
           name: $scope.user.name,
