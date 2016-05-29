@@ -11,13 +11,44 @@ html {
     display:inline-block;
 }
 
+.mobile-header {
+    background-color: #9B201F;
+    min-height:55px;
+    max-height:55px;
+}
+
+.desktop-header {
+    background-color: #68160D;
+    min-height:80px;
+    max-height:80px;
+
+}
+
+#mobile-logo {
+    position: absolute;
+    height: 160px;
+    width:200px;
+    top: 36px;
+    left: 50%;
+    margin-left:-100px;
+}
+
+#desktop-logo {
+    padding-top:10px;
+    padding-left:20px;
+    max-width:250px;
+    min-width:250px;
+    max-height:70px;
+    min-height:70px;
+}
+
 .md-button.arrowButton {
     background-color: #959595;
     min-width: 40px !important;
     width: 6%;
     position:absolute;
     z-index: 2;
-    opacity:1.0;
+    opacity:0.3;
     display:inline-block;
     padding: 0;
     margin:0;
@@ -71,9 +102,17 @@ html {
     width: 20px;
 }
 
+.slider-container {
+    padding-top:5%;
+    padding-left:5%;
+    padding-right:5%;
+}
+
 .slider {
-    width:100%;
-    min-height:55%;
+    width:90vw;
+    min-width:879.3px;
+    height:40vw;
+    min-height:390.8px;
     margin: 0 auto;
     position: relative;
     padding:0px;
@@ -118,6 +157,13 @@ html {
     max-width:85%;
 }
 
+.text {
+    font-family: 'PT Sans';
+    color: #323131;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
 .contentSubheader {
     font-family: 'PT Sans';
     font-size: 16px;
@@ -144,7 +190,8 @@ html {
 }
 
 .footer {
-    height:14%;
+    height:40px;
+    background-color:#323131;
 }
 
 .footer-divider {
@@ -181,13 +228,17 @@ html {
  }
  
 .md-button.mobileMenuButton {
-    min-width:200px;
-    max-width:200px;
-    min-height: 200px;
-    max-height: 200px;
+    min-height:40px !important;
+    max-height:40px !important;
+    min-width:40px !important;
+    max-width:40px !important;
 }
- 
-#hamburger {
-    height:100%;
-    width:100%;
+
+.hamburger {
+    height: 30px;
+    width: 30px;
+}
+
+md-checkbox.md-default-theme.md-checked ._md-icon, md-checkbox.md-checked ._md-icon {
+    background-color: #9B201F !important;
 }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <link rel="stylesheet" type="text/css" href='/stylesheets/shrike_style.css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+    <!-- my scripts -->
+    <script type='text/javascript' src='/javascripts/home.js'></script>
+    <script type='text/javascript' src='/javascripts/dropdown-controller.js'></script>
+    <script type='text/javascript' src='/javascripts/shrike-header-controller.js'></script>
+</head>
+
+<body class="general-background" ng-app="home" ng-controller="home_controller" layout="column">
+
+    <!--for display on standard browsers -->
+    <section ng-show="!onMobileBrowser()">
+
+        <shrike-header></shrike-header>
+
+        <div class="slider" layout="row" flex="noshrink">
+            <md-button id="leftSliderArrow" ng-click="prevSlide()" class="arrowButton">
+                <img src='../images/left-triangle.png' class="arrow">
+            </md-button>
+            <img ng-repeat="slide in slides" ng-hide="!isCurrentSlide($index)" class="slide" ng-src="{{slide}}">
+            <md-button id="rightSliderArrow" ng-click="nextSlide()" class="arrowButton">
+                <img src="../images/right-triangle.png" class="arrow">
+            </md-button>
+        </div>
+
+        <div class="contentModules" layout="row" layout-align="center" flex="noshrink" layout-xs="column" layout-sm="column">
+
+            <div class="contentBox" layout="column" flex="33" flex>
+                <h class="contentTitle">PRISTINE DESIGN</h>
+                <h class="contentTitle">OPTIMUM FUNCTIONALITY</h>
+                <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <md-button class="contentButton"><span class="contentButtonText">EXPLORE OUR PRODUCTS</span></md-button>
+            </div>
+
+            <div class="contentBox" flex="33" flex>
+                <div class="textContainer" layout="column">
+                    <h class="contentTitle">EASY TO USE</h>
+                    <h class="contentTitle">EASY TO INSTALL</h>
+                    <div id="video">
+                        <iframe style="position: absolute; height: 50%;" src="https://www.youtube.com/embed/JCYPCrq1Dgg?rel=0" frameborder="0"></iframe>
+                    </div>
+                    <md-button class="contentButton"><span class="contentButtonText">SEE MORE INSTRUCTIONS</span></md-button>
+                </div>
+            </div>
+
+            <div class="contentBox" flex="33" flex>
+                <div class="textContainer" layout="column">
+                    <h class="contentTitle">KEEP UP TO DATE</h>
+                    <h class="contentTitle">WITH SHRIKE</h>
+                    <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div layout="row">
+                        <a href="https://twitter.com/shrikemounts"><img src="../images/twitter-icon.png" class="socialMediaButton"></a>
+                        <a href="https://www.facebook.com/Shrike-Mounts-1550366691930683/?fref=ts"><img src="../images/facebook-icon.png" class="socialMediaButton" id="facebook"></a>
+                    </div>
+                    <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <md-button class="contentButton"><span class="contentButtonText">JOIN OUR NEWSLETTER</span></md-button>
+            </div>
+
+        </div>
+
+        <div class="footer" flex="noshrink"></div>
+
+    </section>
+
+    <!-- for display on mobile browsers -->
+    <section ng-show="onMobileBrowser()" layout="column" id="mobileHome">
+
+        <!--<div layout="row">-->
+            <!--<md-button ng-click="mobileMenuOpen = !mobileMenuOpen" class="mobileMenuButton">-->
+                <img src="../images/hamburger.png" ng-click="mobileMenuOpen = !mobileMenuOpen" class="mobileMenuButton">
+            <!--</md-button>-->
+        <!--</div>-->
+
+
+        <md-button ng-show="mobileMenuOpen">
+            TEST
+        </md-button>
+
+    </section>
+
+</body>
+
+
+</html>

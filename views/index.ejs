@@ -2,9 +2,11 @@
 <html lang="en-us">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href='/stylesheets/shrike_style.css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
     <!-- Angular Material requires Angular.js Libraries -->
@@ -15,91 +17,148 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 
     <!-- Angular Material Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
 
     <!-- my scripts -->
-    <script type='text/javascript' src='/javascripts/home.js'></script>
+    <script type='text/javascript' src='/javascripts/landing.js'></script>
     <script type='text/javascript' src='/javascripts/dropdown-controller.js'></script>
     <script type='text/javascript' src='/javascripts/shrike-header-controller.js'></script>
 </head>
 
-<body class="general-background" ng-app="home" ng-controller="home_controller" layout="column">
+<body class="general-background" ng-app="landing" ng-controller="landing_controller" layout="column">
 
-    <!--for display on standard browsers -->
-    <section ng-show="!onMobileBrowser()">
-
-        <shrike-header></shrike-header>
-
-        <div class="slider" layout="row" flex="noshrink">
-            <md-button id="leftSliderArrow" ng-click="prevSlide()" class="arrowButton">
-                <img src='../images/left-triangle.png' class="arrow">
-            </md-button>
-            <img ng-repeat="slide in slides" ng-hide="!isCurrentSlide($index)" class="slide" ng-src="{{slide}}">
-            <md-button id="rightSliderArrow" ng-click="nextSlide()" class="arrowButton">
-                <img src="../images/right-triangle.png" class="arrow">
-            </md-button>
+    <!--for display on mobile browsers -->
+    <div ng-show="onMobileBrowser()">
+        <div class="mobile-header" layout="row" layout-align="end center">
+            <md-menu md-position-mode="target-left bottom" class="mobileMenuButton">
+                <md-button ng-click="$mdOpenMenu($event)" class="mobileMenuButton">
+                    <img src="../images/ham_menu.png" class="hamburger">
+                </md-button>
+                <md-menu-content>
+                    <md-menu-item>
+                        <md-button style="font-family: 'PT Sans'; font-size:20px;" ng-click="toPatentDisclosure()">
+                            PATENT DISCLOSURE
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
         </div>
+        <img src="../images/mobile_logo.png" id="mobile-logo">
+        <div style="height: 160px; width:200px;" flex="noshrink"></div>
 
-        <div class="contentModules" layout="row" layout-align="center" flex="noshrink" layout-xs="column" layout-sm="column">
-
-            <div class="contentBox" layout="column" flex="33" flex>
-                <h class="contentTitle">PRISTINE DESIGN</h>
-                <h class="contentTitle">OPTIMUM FUNCTIONALITY</h>
-                <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <md-button class="contentButton"><span class="contentButtonText">EXPLORE OUR PRODUCTS</span></md-button>
+        <!-- placeholder div to offset the absolute positioning of the logo -->
+        <md-content style="height:80%; padding-top: 20px" layout-align="center center">
+            <div>
+                <div style="margin: 0 auto; padding-left:10%; padding-right:10%">
+                    <p class="text">
+                        Shrike Mounts is a Sport Bike Equipment Mounting system created to preserve the sleek silhouette of your bike. The patent-pending design provides a cost effective solution to carry extra materials on sport bikes.
+                    </p>
+                </div>
+                <div style="margin: 0 auto; padding-left:14%; padding-right:14%; padding-top:20px;">
+                    <p class="text">
+                        Our website is currently under construction. Sign up to learn more about Shrike Mounts.
+                    </p>
+                </div class="text">
             </div>
+            <md-input-container md-no-float style="padding-left:10%; padding-right:10%; height:15px; width:100%">
+                <input type="text" class="mobile-text" ng-model="user.name" placeholder="name">
+            </md-input-container>
+            <md-input-container md-no-float style="padding-left:10%; padding-right:10%; height:15px; width:100%">
+                <input type="text" class="mobile-text" ng-model="user.email" placeholder="email">
+            </md-input-container>
+            <div style="padding-top: 30px; padding-left:10%; padding-right:10%;">
+                <md-checkbox class="shrike-red" ng-model="hasUpdateInterest">
+                    <span class="mobile-text" style="font-size: 14px"> YES - I would like to receive updates about Shrike Products and release dates </span>
+                </md-checkbox>
+                <md-checkbox ng-model="hasPurchaseInterest">
+                    <span class="mobile-text" style="font-size: 14px"> YES - I am interested in trying out Shrike Mounts about would like to know more about purchasing</span>
+                </md-checkbox>
+            </div>
+            <md-button ng-click="submit()" style="width:50%; left: 25%; background-color: #9B201F; color: white; font-family: 'PT Sans'; font-size:20px;">
+                SUBMIT
+            </md-button>
+        </md-content>
+    </div>
 
-            <div class="contentBox" flex="33" flex>
-                <div class="textContainer" layout="column">
-                    <h class="contentTitle">EASY TO USE</h>
-                    <h class="contentTitle">EASY TO INSTALL</h>
-                    <div id="video">
-                        <iframe style="position: absolute; height: 50%;" src="https://www.youtube.com/embed/JCYPCrq1Dgg?rel=0" frameborder="0"></iframe>
-                    </div>
-                    <md-button class="contentButton"><span class="contentButtonText">SEE MORE INSTRUCTIONS</span></md-button>
+    <!--for display on desktop browsers -->
+    <div ng-show="!onMobileBrowser()" style="width:100%; height:100%">
+        <div style="width:100%; height:100%; min-height:700px;">
+            <div class="desktop-header" layout="row">
+                <img src="../images/logo_white.png" id="desktop-logo">
+                <md-menu md-position-mode="target-right bottom" style="position:absolute; right:20px; top: 8px">
+                    <md-button ng-click="$mdOpenMenu($event)" class="mobileMenuButton">
+                        <img src="../images/ham_menu.png" class="hamburger">
+                    </md-button>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <md-button style="font-family: 'PT Sans'; font-size:20px;" ng-click="toPatentDisclosure()">
+                                PATENT DISCLOSURE
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="slider-container">
+                <div class="slider" layout="row" flex="noshrink">
+                    <md-button id="leftSliderArrow" ng-click="prevSlide()" class="arrowButton">
+                        <img src='../images/left-triangle.png' class="arrow">
+                    </md-button>
+                    <img ng-repeat="slide in slides" ng-hide="!isCurrentSlide($index)" class="slide" ng-src="{{slide}}">
+                    <md-button id="rightSliderArrow" ng-click="nextSlide()" class="arrowButton">
+                        <img src="../images/right-triangle.png" class="arrow">
+                    </md-button>
                 </div>
             </div>
-
-            <div class="contentBox" flex="33" flex>
-                <div class="textContainer" layout="column">
-                    <h class="contentTitle">KEEP UP TO DATE</h>
-                    <h class="contentTitle">WITH SHRIKE</h>
-                    <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <div layout="row">
-                        <a href="https://twitter.com/shrikemounts"><img src="../images/twitter-icon.png" class="socialMediaButton"></a>
-                        <a href="https://www.facebook.com/Shrike-Mounts-1550366691930683/?fref=ts"><img src="../images/facebook-icon.png" class="socialMediaButton" id="facebook"></a>
-                    </div>
-                    <p class="contentText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <md-button class="contentButton"><span class="contentButtonText">JOIN OUR NEWSLETTER</span></md-button>
-            </div>
-
         </div>
-
-        <div class="footer" flex="noshrink"></div>
-
-    </section>
-
-    <!-- for display on mobile browsers -->
-    <section ng-show="onMobileBrowser()" layout="column" id="mobileHome">
-
-        <!--<div layout="row">-->
-            <!--<md-button ng-click="mobileMenuOpen = !mobileMenuOpen" class="mobileMenuButton">-->
-                <img src="../images/hamburger.png" ng-click="mobileMenuOpen = !mobileMenuOpen" class="mobileMenuButton">
-            <!--</md-button>-->
-        <!--</div>-->
-
-
-        <md-button ng-show="mobileMenuOpen">
-            TEST
-        </md-button>
-
-    </section>
-
+        <div style="padding-left:5%; padding-right:5%; min-width:879.3px; padding-bottom:10px" layout="row">
+            <md-content style="padding-left:3%; padding-right: 3%; width:33%">
+                <p class="text" style="font-size:22px">
+                    Shrike Mounts is a Sport Bike Equipment Mounting system created to preserve the sleek silhouette of your bike. The patent-pending design provides a cost effective solution to carry extra materials on sport bikes.
+                </p>
+            </md-content>
+            <md-content style="padding-left:3%; padding-right: 3%; width:33%">
+                <p class="text" style="font-size:22px">
+                    Our website is currently under construction. Sign up to learn more about Shrike Mounts.
+                </p>
+                <md-input-container style="width:100%; height:30px" md-no-float>
+                    <input type="text" class="text" ng-model="user.name" placeholder="name">
+                </md-input-container>
+                <md-input-container style="width:100%; height:30px" md-no-float>
+                    <input type="text" class="text" ng-model="user.email" placeholder="email">
+                </md-input-container>
+                <md-checkbox class="shrike-red" style="padding-top:10px" ng-model="hasUpdateInterest">
+                    <span class="mobile-text" style="font-size: 12px"> YES - I would like to receive updates about Shrike Products and release dates </span>
+                </md-checkbox>
+                <md-checkbox ng-model="hasPurchaseInterest">
+                    <span class="mobile-text" style="font-size: 12px"> YES - I am interested in trying out Shrike Mounts about would like to know more about purchasing</span>
+                </md-checkbox>
+                <md-button ng-click="submit()" style="width:50%; left: 25%; background-color: #9B201F; color: white; font-family: 'PT Sans'; font-size:20px;">
+                    SUBMIT
+                </md-button>
+            </md-content>
+            <md-content style="padding-left: 3%; padding-right: 3%; width:33%" layout="column">
+                <p class="text" style="font-size:22px">
+                    Follow us on social media for updates, photos, and event information.
+                </p>
+                <div style="padding-top:20px" layout="row">
+                    <a href="https://twitter.com/shrikemounts"><img src="../images/twitter-icon.png" style="width:38px; height:38px"></a>
+                    <p class="text" style="position:absolute; left:80px; font-size:22px">
+                        @shrikemounts
+                    </p>
+                </div>
+                <div style="padding-top:20px" layout="row">
+                    <a href="https://www.facebook.com/Shrike-Mounts-1550366691930683/?fref=ts"><img src="../images/facebook-icon.png" style="width:38px; height:38px"></a>
+                    <p class="text" style="position:absolute; left:85px; font-size:22px">
+                        Shrike Mounts
+                    </p>
+                </div>
+            </md-content>
+        </div>
+        <div class="footer"></div>
+    </div>
 </body>
-
 
 </html>
