@@ -22,7 +22,7 @@ landingModule.config([
 landingModule.controller('landing_controller', function($scope, $mdMenu, $window, $http) {
   
     $scope.toPatentDisclosure = function() {
-      $window.location.href = '/patent-disclosure';
+      $window.location.href = '/patents';
     }
 
     $scope.submit = function() {

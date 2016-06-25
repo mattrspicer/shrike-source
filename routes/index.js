@@ -8,16 +8,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/patent-disclosure', function(req, res, next) {
+router.get('/patents', function(req, res, next) {
   res.render('patent-disclosure');
 });
 
-router.get('/trialusers', function(req, res, next) {
-  TrialUsers.find(function(err, events){
-    if(err){ return next(err); }
-    res.json(events);
-  });
-});
+// router.get('/trialusers', function(req, res, next) {
+//   TrialUsers.find(function(err, events){
+//     if(err){ return next(err); }
+//     res.json(events);
+//   });
+// });
 
 router.post('/trialusers', function(req, res) {
   var newUser = new TrialUsers(req.body);

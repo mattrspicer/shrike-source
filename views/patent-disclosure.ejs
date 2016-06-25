@@ -31,20 +31,44 @@
 <body class="general-background" ng-app="landing" ng-controller="landing_controller" layout="column">
 
     <!--for display on mobile browsers -->
-    <div ng-show="onMobileBrowser()">
-        <div class="mobile-header" layout="row" layout-align="end center">
-            <md-menu md-position-mode="target-left bottom" class="mobileMenuButton">
-                <md-button ng-click="$mdOpenMenu($event)" class="mobileMenuButton">
-                    <img src="../images/ham_menu.png" class="hamburger">
-                </md-button>
-                <md-menu-content>
-                    <md-menu-item>
-                        <md-button style="font-family: 'PT Sans'; font-size:20px;">
-                            PATENT DISCLOSURE
-                        </md-button>
-                    </md-menu-item>
-                </md-menu-content>
-            </md-menu>
+    <div ng-show="onMobileBrowser()" style="height:100%">
+        <div style="position:relative; height:100%" layout="column">
+            <div class="mobile-header" layout="row" layout-align="end center">
+                <md-menu md-position-mode="target-left bottom" class="mobileMenuButton">
+                    <md-button ng-click="$mdOpenMenu($event)" class="mobileMenuButton">
+                        <img src="../images/ham_menu.png" class="hamburger">
+                    </md-button>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <md-button style="font-family: 'PT Sans'; font-size:20px;">
+                                PATENT DISCLOSURE
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <md-content>
+                <div style="padding-left:5%; padding-right:5%; padding-top:5%; padding-bottom:25px; height:82%">
+                    <p class="text" style="font-size:16px">
+                        Blackbird Dynamics, LLC is a provider of motorcycle products including the Shrike Mounts™ system. Blackbird Dynamics's technology can be found in the company's products.<br><br>
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        This page is intended to serve as notice under 35 U.S.C. § 287(a).<br><br>
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        Product: Shrike Mounts Saddlebag Mounting System
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        US Patent Number 8,646,669
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        Other Patents Pending including US Application Number 13/998911
+                    </p>
+                </div>
+            </md-content>
+            <div class="footer" style="position: absolute; bottom: 0px; width:100%;">
+                <p class="text" style="color:white; font-size:10px; padding-top:15px; padding-left:15px;"> © 2016 Blackbird Dynamics, LLC. SHRIKE MOUNTS and designs are trademarks of Blackbird Dynamics, LLC.</p>
+            </div>
         </div>
     </div>
 
@@ -66,7 +90,29 @@
                     </md-menu-content>
                 </md-menu>
             </div>
-    </div>
+            <md-content>
+                <div style="padding-left:5%; padding-right:5%; padding-top:5%; padding-bottom:25px; height:82%">
+                    <p class="text" style="font-size:16px">
+                        Blackbird Dynamics, LLC is a provider of motorcycle products including the Shrike Mounts™ system. Blackbird Dynamics's technology can be found in the company's products.<br><br>
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        This page is intended to serve as notice under 35 U.S.C. § 287(a).<br><br>
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        Product: Shrike Mounts Saddlebag Mounting System
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        US Patent Number 8,646,669
+                    </p>
+                    <p class="text" style="font-size:16px">
+                        Other Patents Pending including US Application Number 13/998911
+                    </p>
+                </div>
+            </md-content>
+            <div class="footer" style="position: absolute; bottom: 0px; width:100%;">
+                <p class="text" style="color:white; font-size:10px; padding-top:15px; padding-left:15px;"> © 2016 Blackbird Dynamics, LLC. SHRIKE MOUNTS and designs are trademarks of Blackbird Dynamics, LLC.</p>
+            </div>
+        </div>
 </body>
 
 </html>
