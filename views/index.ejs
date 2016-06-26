@@ -50,16 +50,16 @@
         <div style="height: 160px; width:200px;" flex="noshrink"></div>
 
         <!-- placeholder div to offset the absolute positioning of the logo -->
-        <md-content style="height:80%; padding-top: 20px" layout-align="center center">
+        <md-content style="height:80%; padding-top: 20px; padding-bottom: 25px;" layout-align="center center">
             <div>
                 <div style="margin: 0 auto; padding-left:10%; padding-right:10%">
                     <p class="text">
-                        Shrike Mounts is a Sport Bike Equipment Mounting system created to preserve the sleek silhouette of your bike. The patent-pending design provides a cost effective solution to carry extra materials on sport bikes.
+                        The Shrike Mounts™ system is a sportbike luggage mounting system created to preserve the sleek silhouette of your bike. The patented design provides a cost effective solution to carry extra materials on sportbikes.
                     </p>
                 </div>
                 <div style="margin: 0 auto; padding-left:14%; padding-right:14%; padding-top:20px;">
                     <p class="text">
-                        Our website is currently under maintenance. Sign up to learn more about Shrike Mounts. Email us at &#115;&#104;&#114;&#105;&#107;&#101;&#109;&#111;&#117;&#110;&#116;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109.
+                        Our website is currently under maintenance. Sign up to learn more about Shrike Mounts products and email questions to &#115;&#104;&#114;&#105;&#107;&#101;&#109;&#111;&#117;&#110;&#116;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109.
                     </p>
                 </div class="text">
             </div>
@@ -71,10 +71,10 @@
             </md-input-container>
             <div style="padding-top: 30px; padding-left:10%; padding-right:10%;">
                 <md-checkbox class="shrike-red" ng-model="hasUpdateInterest">
-                    <span class="mobile-text" style="font-size: 14px"> YES - I would like to receive updates about Shrike Products and release dates </span>
+                    <span class="mobile-text" style="font-size: 14px"> YES - I would like to receive updates about Shrike Mounts products and release dates </span>
                 </md-checkbox>
                 <md-checkbox ng-model="hasPurchaseInterest">
-                    <span class="mobile-text" style="font-size: 14px"> YES - I am interested in trying out Shrike Mounts about would like to know more about purchasing</span>
+                    <span class="mobile-text" style="font-size: 14px"> YES - I am interested in trying out the Shrike Mounts system and would like to know more about purchasing </span>
                 </md-checkbox>
             </div>
             <md-button ng-click="submit()" style="width:50%; left: 25%; background-color: #9B201F; color: white; font-family: 'PT Sans'; font-size:20px;">
@@ -88,7 +88,7 @@
 
     <!--for display on desktop browsers -->
     <div ng-show="!onMobileBrowser()" style="width:100%; height:100%">
-        <div style="width:100%; height:100%; min-height:700px;">
+        <div style="width:100%;">
             <div class="desktop-header" layout="row">
                 <img src="../images/logo_white.png" id="desktop-logo">
                 <md-menu md-position-mode="target-right bottom" style="position:absolute; right:20px; top: 8px">
@@ -105,7 +105,7 @@
                 </md-menu>
             </div>
             <div class="slider-container">
-                <div class="slider" layout="row" flex="noshrink">
+                <div class="slider" layout="row" >
                     <md-button id="leftSliderArrow" ng-click="prevSlide()" class="arrowButton">
                         <img src='../images/left-triangle.png' class="arrow">
                     </md-button>
@@ -119,12 +119,12 @@
         <div style="padding-left:5%; padding-right:5%; min-width:879.3px; padding-bottom:10px" layout="row">
             <md-content style="padding-left:3%; padding-right: 3%; width:33%">
                 <p class="text" style="font-size:22px">
-                    Shrike Mounts is a Sport Bike Equipment Mounting system created to preserve the sleek silhouette of your bike. The patent-pending design provides a cost effective solution to carry extra materials on sport bikes.
+                    The Shrike Mounts™ system is a sportbike luggage mounting system created to preserve the sleek silhouette of your bike. The patented design provides a cost effective solution to carry extra materials on sportbikes.
                 </p>
             </md-content>
             <md-content style="padding-left:3%; padding-right: 3%; width:33%">
                 <p class="text" style="font-size:22px">
-                    Our website is currently under maintenance. Sign up to learn more about Shrike Mounts.
+                    Our website is currently under maintenance. Sign up to learn more about Shrike Mounts products.
                 </p>
                 <md-input-container style="width:100%; height:30px" md-no-float>
                     <input type="text" class="text" ng-model="user.name" placeholder="name">
@@ -133,10 +133,10 @@
                     <input type="text" class="text" ng-model="user.email" placeholder="email">
                 </md-input-container>
                 <md-checkbox class="shrike-red" style="padding-top:10px" ng-model="hasUpdateInterest">
-                    <span class="mobile-text" style="font-size: 12px"> YES - I would like to receive updates about Shrike Products and release dates </span>
+                    <span class="mobile-text" style="font-size: 12px"> YES - I would like to receive updates about Shrike Mounts products and release dates </span>
                 </md-checkbox>
                 <md-checkbox ng-model="hasPurchaseInterest">
-                    <span class="mobile-text" style="font-size: 12px"> YES - I am interested in trying out Shrike Mounts about would like to know more about purchasing</span>
+                    <span class="mobile-text" style="font-size: 12px"> YES - I am interested in trying out the Shrike Mounts system and would like to know more about purchasing </span>
                 </md-checkbox>
                 <md-button ng-click="submit()" style="width:50%; left: 25%; background-color: #9B201F; color: white; font-family: 'PT Sans'; font-size:20px;">
                     SUBMIT
