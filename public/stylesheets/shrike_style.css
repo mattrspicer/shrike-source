@@ -243,3 +243,13 @@ html {
 md-checkbox.md-default-theme.md-checked ._md-icon, md-checkbox.md-checked ._md-icon {
     background-color: #9B201F !important;
 }
+
+md-input-container.md-default-theme label, 
+ md-input-container.md-default-theme .md-placeholder{
+    background-color:orange !important;
+}
+
+.md-input-container.md-input-has-placeholder {
+    background-color: orange !important;
+}
+
