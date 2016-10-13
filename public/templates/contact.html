@@ -1,0 +1,23 @@
+<div layout-xs="column" layout-sm="column" layout="row" layout-align="center top" ng-controller="contact_controller" style="background-color:black; padding-left:40px; padding-right:40px">
+    <div hide-xs flex="10"></div>
+    <div flex>
+        <p class="body-text">
+            The Shrike Mounts team would love to hear from you. Feel free to send us questions, comments, or thoughts you have about our product. <br><br> Email us at shrikemounts@gmail.com
+        </p>
+    </div>
+    <div style="width:10%"></div>
+    <div flex>
+        <p class="body-text">
+            To receive updates about the launch of the Shrike Mounts system, please enter your information below.
+        </p>
+        <div layout="column">
+            <div style="height:25px"></div>
+            <input style="background: #CCCBCB; border-radius: 20px; width:75%; border-style:solid; padding-left:15px; padding-right:15px; font-family: PT Sans; font-size: 18px; color:black" placeholder="name" type="text" ng-model="user.name">
+            <div style="height:20px"></div>
+            <input style="background: #CCCBCB; border-radius: 20px; width:75%; border-style:solid; padding-left:15px; padding-right:15px; font-family: PT Sans; font-size: 18px; color:black;" placeholder="email address" type="text" ng-model="user.email">
+            <div style="height:20px"></div>
+            <md-button style="color:white; background-color:#BAD8DB; width:100px; border-radius:10px;" ng-click="submit()"><span class="body-text" style="font-size: 16px; font-weight:bold">SUBMIT</span></md-button>
+        </div>
+    </div>
+    <div hide-xs flex="10"></div>
+</div>

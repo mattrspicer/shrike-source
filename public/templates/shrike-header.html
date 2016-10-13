@@ -1,19 +1,35 @@
-<div class="header" layout="row" layout-align="center center" flex="noshrink">
-    <div flex="70">
-        <a href='../views/home.html'><img src="../images/logo1.png" alt="logo" id="logo"></a>
+<div layout="row" layout-xs="column" layout-sm="column" style="padding-left:5%; padding-right:5%; background-color:#000000">
+
+     <!--logo -->
+    <div layout-sm="column" layout-align-sm="center center" layout-xs="column" layout-align-xs="center center" flex-sm>
+        <img src="../images/shrike-logo-fall-2016.png" style="height:200px; width:280px; min-height:200px; min-width:280px; ">
     </div>
-    <div flex="15">
-        <md-button class="headerButton" ng-click="toAbout()">
-            <span class="headerButtonText">ABOUT</span>
-        </md-button>
+    
+    <!-- buttons -->
+    <div id="button bar" layout="row" layout-align="end center" layout-align-sm="center center" layout-xs="column" layout-align-xs="center center" flex>
+            <md-button class="headerButton" ng-click="go('/')">
+                <span class="headerButtonText">HOME</span>
+            </md-button>
+
+            <md-button class="headerButton"  ng-click="go('/about')">
+                <span class="headerButtonText">ABOUT</span>
+                <a href="#about"></a>
+            </md-button>
+
+            <md-button class="headerButton" ng-click="go('/contact')">
+                <span class="headerButtonText">CONTACT</span>
+            </md-button>
+
+            <md-button class="headerButton">
+                <span class="headerButtonText">PURCHASE</span>
+            </md-button>
     </div>
-    <dropdown-nav-menu items="['PEGS', 'PLATES', 'BAGS']" trigger="'productButton'" menu="'productMenu'" flex="15"></dropdown-nav-menu>
-    <div flex="15">
-        <md-button class="headerButton" ng-click="toGallery()">
-            <span class="headerButtonText">GALLERY</span>
-        </md-button>
-    </div>
-    <md-button id="cart" ng-click="toCart()">
-        <img src="../images/shoppingbag.png" id="cart">
-    </md-button>
+    
+    <div style="height:30px" show-xs></div>
+
+
+    <!-- dropdown menu -->
+    <!--<dropdown-nav-menu items="['PEGS', 'PLATES', 'BAGS']" trigger="'productButton'" menu="'productMenu'" flex="15"></dropdown-nav-menu>-->
+
+
 </div>

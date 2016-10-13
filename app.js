@@ -6,7 +6,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var users = require('./routes/users');
 
 // mongoose model
@@ -18,7 +17,6 @@ var routes = require('./routes/index.js');
 var app = express();
 
 // establish database connection
-
 mongoose.connect('mongodb://localhost/model');
 
 // view engine setup
@@ -35,6 +33,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+// let angular router handle routing
+app.use(function(req, res) {
+  // Use res.sendfile, as it streams instead of reading the file into memory.
+  res.sendfile(__dirname + '/views/home.ejs');
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
