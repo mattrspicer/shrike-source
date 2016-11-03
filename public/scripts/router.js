@@ -1,6 +1,6 @@
 var shrikeApp = angular.module('shrike-app');
 
-shrikeApp.config(function($routeProvider) {
+shrikeApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl: './templates/home.html'
@@ -23,4 +23,6 @@ shrikeApp.config(function($routeProvider) {
         .otherwise({
             redirectTo: '/'
         });
+        
+        $locationProvider.html5Mode(true);
 });

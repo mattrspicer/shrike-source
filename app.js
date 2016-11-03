@@ -34,12 +34,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-// let angular router handle routing
-app.use(function(req, res) {
-  // Use res.sendfile, as it streams instead of reading the file into memory.
-  res.sendfile(__dirname + '/views/home.ejs');
-});
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
