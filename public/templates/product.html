@@ -1,0 +1,99 @@
+<div ng-controller="product_controller">
+
+    <!-- Carousel for Non-mobile -->
+    <div style="background-color: #000000; padding-left:10%; padding-right:10%; padding-bottom:30px" hide-xs hide-sm>
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide index="0" style="background-color:blackl; padding-bottom:70px">
+                <img src="../images/typeslide_web-01.png" class="home-slides-desktop">
+            </div>
+            <div uib-slide index="1" style="background-color:black; padding-bottom:70px">
+                <img src="../images/typeslide_web-02.png" class="home-slides-desktop">
+            </div>
+            <div uib-slide index="2" style="background-color:black; padding-bottom:70px">
+                <img src="../images/typeslide_web-03.png" class="home-slides-desktop">
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel for Mobile -->
+    <div style="background-color: #000000; padding-bottom:30px" hide-gt-sm>
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide index="0" style="background-color:blackl; padding-bottom:70px">
+                <img src="../images/typeslide_mobile-01.png" class="home-slides-mobile">
+            </div>
+            <div uib-slide index="1" style="background-color:black; padding-bottom:70px">
+                <img src="../images/typeslide_mobile-02.png" class="home-slides-mobile">
+            </div>
+            <div uib-slide index="2" style="background-color:black; padding-bottom:70px">
+                <img src="../images/typeslide_mobile-03.png" class="home-slides-mobile">
+            </div>
+        </div>
+    </div>
+
+    <!-- Installation Instructions -->
+    <div layout="column">
+        <div layout="column" layout-align="center" style="background-color: #A6CAD0; padding-left:7%; padding-right:7%; height:140px">
+            <span class="mission-impact-text" style="font-size:45px; font-weight:900; font-style:italic;">
+                INSTALL IN 4 EASY STEPS
+            </span>
+        </div>
+        <div layout="row" style="background-color: #BAD8DB;">
+            <div hide-gt-sm flex=10></div>
+            <div flex layout="row" layout-xs="column" layout-sm="column" style="font-family:'PT Sans'; padding-bottom: 115px; padding-top:100px">
+                <div hide-xs hide-sm style="width:14%"></div>
+                <div layout="column" layout-align="center">
+                    <p class="list-items" style="font-size: 22px">
+                        1. Remove the passenger footpeg. <br/> 
+                        2. Install the Shrike Mounts peg. <br/> 
+                        3. Tighten the jack screws. <br/> 
+                        4. Mount the receiver with the bag and plate attached. <br/>
+                    </p>
+                </div>
+                <div hide-xs hide-sm style="width:8%"></div>
+                <div hide-gt-sm style="height:100px"></div>
+                <div flex-xs=90 flex-sm=90 flex-gt-sm=60 style="height:360px;">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0l7tg6XvvlM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div hide-xs hide-sm style="width:14%"></div>
+            </div>
+            <div hide-gt-sm flex=10></div>
+        </div>
+    </div>
+
+    <!-- Key Facts About the Product -->
+    <div layout="column">
+        <div layout="column" layout-align="center" style="background-color: #262626; padding-left:7%; padding-right:7%; height:140px">
+            <span class="mission-impact-text" style="font-size:45px; font-weight:900; font-style:italic;">
+                ABOUT THE SYSTEM
+            </span>
+        </div>
+        <div layout="row" style="background-color: #ffffff;">
+            <div flex layout="row" layout-xs="column" layout-sm="column" style="font-family:'PT Sans'; font-size: 22px; font-weight:bold; padding-bottom: 115px; padding-top:100px; padding-left:8%; padding-right:7%;">
+                <div layout="column" flex-gt-sm=60>
+                    <div layout-xs="column" layout-sm="column" layout-gt-sm="row" style="padding-bottom:40px">
+                        <div style="min-width:125px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE PEG</span></div>
+                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;"><p>—</p></div>
+                        <div flex><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis est interdum, faucibus elit in, placerat diam.</span></div>
+                    </div>
+                    <div layout-xs="column" layout-sm="column" layout-gt-sm="row" style="padding-bottom:40px">
+                        <div style="min-width:125px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE PIN</span></div>
+                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;"><p>—</p></div>
+                        <div flex><span>The jack screws ensure a rock solid mounting point.</span></div>
+                    </div>
+                    <div layout-xs="column" layout-sm="column" layout-gt-sm="row">
+                        <div style="min-width:125px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE PLATE</span></div>
+                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;"><p>—</p></div>
+                        <div flex><span>The receiver mates to the peg and </span></div>
+                    </div>
+                </div>
+                <div hide-xs hide-sm flex=5></div>
+                <div hide-gt-sm style="height:100px"></div>
+                <div flex-gt-sm=35>
+                    <div style="height:360px;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZqZ9f89Xgcg" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

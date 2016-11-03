@@ -301,6 +301,21 @@ th {
     line-height: 34px;
 }
 
+.form-label {
+    font-family: 'PT Sans'; font-style: italic; color:#808080; font-size:18px;
+}
+
+.form-input {
+    background: #DDDDDD; border-radius: 10px; border:0px; padding-left:15px; padding-right:15px; font-family: PT Sans; font-size: 15px; color:black; width:100%
+}
+
+.md-button.submit-button {
+    border-radius: 6px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    background-color: #DDDDDD;
+}
+
 ::-webkit-input-placeholder {
     color: black;
     font-family:'PT Sans';

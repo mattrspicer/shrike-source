@@ -1,42 +1,18 @@
-<div ng-controller="product_controller">
-    <div style="background-color: #000000; padding-left:10%; padding-right:10%; padding-bottom:30px" hide-xs hide-sm>
-        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-            <div uib-slide index="0" style="background-color:blackl; padding-bottom:70px">
-                <img src="../images/typeslide_web-01.png" class="home-slides-desktop">
-            </div>
-            <div uib-slide index="1" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_web-02.png" class="home-slides-desktop">
-            </div>
-            <div uib-slide index="2" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_web-03.png" class="home-slides-desktop">
-            </div>
-        </div>
-    </div>
-
-    <div style="background-color: #000000; padding-bottom:30px" hide-gt-sm>
-        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-            <div uib-slide index="0" style="background-color:blackl; padding-bottom:70px">
-                <img src="../images/typeslide_mobile-01.png" class="home-slides-mobile">
-            </div>
-            <div uib-slide index="1" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_mobile-02.png" class="home-slides-mobile">
-            </div>
-            <div uib-slide index="2" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_mobile-03.png" class="home-slides-mobile">
+<div ng-controller="home_controller">
+    
+    <div layout="row" style="background-color: #000000; padding-top:20px; padding-bottom:120px">
+        <div flex>
+            <div id="mission-taglines" flex-gt-xs="60" layout-align-xs="center enter" style="padding-left:10%">
+                <p class="mission-impact-text" style="line-height: 45px; padding-bottom:10px;">
+                    RIDE A SPORT BIKE? <br/><br/>
+                    HAUL YOUR GEAR WITHOUT TRASHING YOUR RIDE<br/>
+                </p>
+                <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#BAD8DB;" ng-click="go('/product')">
+                    <span style="font-size:12px; font-family: 'PT Sans'; font-style:italic; font-weight:bold;">LEARN MORE</span>
+                </md-button>
             </div>
         </div>
     </div>
-
-    <!--<div style="background-color: #000000; padding-top:20px; padding-bottom:120px">-->
-    <!--    <div id="mission-taglines" flex-gt-xs="60" layout-align-xs="center enter" style="padding-left:10%">-->
-    <!--        <p class="mission-impact-text" style="line-height: 45px; padding-bottom:10px">-->
-    <!--            SOMETHING HERE <br/> ABOUT THE MISSION STATEMENT <br/><br/> EASY TO INSTALL <br/> EASY TO USE <br/>-->
-    <!--        </p>-->
-    <!--        <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#BAD8DB;">-->
-    <!--            <span style="font-size:12px; font-family: 'PT Sans'; font-style:italic; font-weight:bold;">LEARN MORE</span>-->
-    <!--        </md-button>                -->
-    <!--    </div>-->
-    <!--</div>-->
 
     <div style="background-color: #A6CAD0; padding-top:70px; padding-bottom:100px; padding-left:10%; padding-right:10%" layout="column" layout-gt-sm="row">
         <div flex style="padding-top:30px">
