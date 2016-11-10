@@ -11,12 +11,12 @@ shrikeApp.config(function($routeProvider, $locationProvider) {
         .when('/contact', {
             templateUrl: './templates/contact.html'
         })
-        // .when('/product', {
-        //     templateUrl: './templates/product.html'
-        // })
-        // .when('/purchase', {
-        //     templateUrl: './templates/purchase.html'
-        // })
+        .when('/product', {
+            templateUrl: './templates/product.html'
+        })
+        .when('/purchase', {
+            templateUrl: './templates/purchase.html'
+        })
         .when('/patents', {
             templateUrl: './templates/patents.html'
         })
