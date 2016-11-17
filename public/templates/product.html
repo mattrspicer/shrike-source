@@ -1,31 +1,53 @@
 <div ng-controller="product_controller">
 
     <!-- Carousel for Non-mobile -->
-    <div style="background-color: #000000; padding-left:10%; padding-right:10%; padding-bottom:30px" hide-xs hide-sm>
-        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-            <div uib-slide index="0" style="background-color:blackl; padding-bottom:70px">
-                <img src="../images/typeslide_web1027-01.png" class="home-slides-desktop">
-            </div>
-            <div uib-slide index="1" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_web1027-02.png" class="home-slides-desktop">
-            </div>
-            <div uib-slide index="2" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_web1027-03.png" class="home-slides-desktop">
+    <div style="height:475px; background-color: #000000; padding-left:10%; padding-right:10%; padding-bottom:30px" hide-xs hide-sm>
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" style="height:100%">
+            <div ng-repeat="slide in slides" uib-slide index="$index" style="background-color:black; padding-bottom:70px">
+                <div layout-xs="column" layout-sm="column" layout="row">
+                    <div flex=60 layout="column" layout-align="top center" style="padding-top:40px; padding-bottom:40px; padding-left:40px; padding-right:60px">
+                        <p class="mission-impact-text" style="font-size:40px; font-weight:900; text-align:left;">
+                            {{slide.call_out}}
+                        </p>
+                    </div>
+                    <div flex="40" style="padding-top:46px; padding-bottom:40px; padding-right:40px">
+                        <p style="font-family:'PT Sans'; font-size:17px; line-height: 24px; color:white; text-align:left;">
+                            {{slide.rest_of_quote}}
+                        </p>
+                        <div layout="column" layout-align="center end" style="padding-right:25px; padding-top:14px;">
+                            <img src="{{slide.thumbnail_path}}" style="width:125px; height:80px">
+                            <p style="font-family:'PT Sans'; font-size:17px; line-height: 24px; color:white; text-align:right; padding-top:14px;">
+                                {{slide.rider_name}}<br> {{slide.bike_name}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+    
     <!-- Carousel for Mobile -->
-    <div style="background-color: #000000; padding-bottom:30px" hide-gt-sm>
-        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-            <div uib-slide index="0" style="background-color:blackl; padding-bottom:70px">
-                <img src="../images/typeslide_mobile1027-01.png" class="home-slides-mobile">
-            </div>
-            <div uib-slide index="1" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_mobile-02.png" class="home-slides-mobile">
-            </div>
-            <div uib-slide index="2" style="background-color:black; padding-bottom:70px">
-                <img src="../images/typeslide_mobile1027-03.png" class="home-slides-mobile">
+    <div style="height:700px; background-color: #000000; padding-left:10%; padding-right:10%; padding-bottom:30px" hide-gt-sm>
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" style="height:100%">
+            <div ng-repeat="slide in slides" uib-slide index="$index" style="background-color:black; padding-bottom:70px">
+                <div layout="column" layout-align="center center" style="padding-top:40px;">
+                    <div>
+                        <p class="mission-impact-text" style="font-size:40px; font-weight:900; text-align:left;">
+                            {{slide.call_out}}
+                        </p>
+                    </div>
+                    <div>
+                        <p style="font-family:'PT Sans'; font-size:17px; line-height: 24px; color:white; text-align:left;">
+                            {{slide.rest_of_quote}}
+                        </p>
+                        <div layout="column" layout-align="center end">
+                            <img src="{{slide.thumbnail_path}}" style="width:125px; height:80px; padding-top:20px">
+                            <p style="font-family:'PT Sans'; font-size:17px; line-height: 24px; color:white; text-align:right; padding-top:20px">
+                                {{slide.rider_name}}<br> {{slide.bike_name}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -43,16 +65,13 @@
                 <div hide-xs hide-sm style="width:14%"></div>
                 <div layout="column" layout-align="center">
                     <p class="list-items" style="font-size: 22px">
-                        1. Remove the passenger footpeg. <br/> 
-                        2. Install the Shrike Mounts peg. <br/> 
-                        3. Tighten the jack screws. <br/> 
-                        4. Mount the receiver with the bag and plate attached. <br/>
+                        1. Remove the passenger foot peg. <br/> 2. Install the Shrike Mounts peg and secure with pin. <br/> 3. Adjust and tighten the jack screws. <br/> 4. Mount the receiver with the plate and bag attached. <br/>
                     </p>
                 </div>
                 <div hide-xs hide-sm style="width:8%"></div>
                 <div hide-gt-sm style="height:100px"></div>
                 <div flex-xs=90 flex-sm=90 flex-gt-sm=60 style="height:360px;">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0l7tg6XvvlM" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0l7tg6XvvlM?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div hide-xs hide-sm style="width:14%"></div>
             </div>
@@ -71,26 +90,32 @@
             <div flex layout="row" layout-xs="column" layout-sm="column" style="font-family:'PT Sans'; font-size: 22px; font-weight:bold; padding-bottom: 115px; padding-top:100px; padding-left:8%; padding-right:7%;">
                 <div layout="column" flex-gt-sm=60>
                     <div layout-xs="column" layout-sm="column" layout-gt-sm="row" style="padding-bottom:40px">
-                        <div style="min-width:170px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE PEG</span></div>
-                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;"><p>—</p></div>
-                        <div flex><span>The Shrike Mounts System utilizes your bike's passenger footpeg to let you mount your gear.</span></div>
+                        <div style="min-width:195px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE PEG</span></div>
+                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;">
+                            <p>—</p>
+                        </div>
+                        <div flex><span>Easy to install and looks like a <br> stock foot peg.</span></div>
                     </div>
                     <div layout-xs="column" layout-sm="column" layout-gt-sm="row" style="padding-bottom:40px">
-                        <div style="min-width:170px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE PIN</span></div>
-                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;"><p>—</p></div>
-                        <div flex><span>Jack screws ensure a rock-solid mounting point which makes for a smooth ride.</span></div>
+                        <div style="min-width:195px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE JACK SCREWS</span></div>
+                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;">
+                            <p>—</p>
+                        </div>
+                        <div flex><span>Holds the peg firmly in place. Surprisingly rigid!</span></div>
                     </div>
                     <div layout-xs="column" layout-sm="column" layout-gt-sm="row">
-                        <div style="min-width:170px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE RECEIVER</span></div>
-                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;"><p>—</p></div>
-                        <div flex><span>Versatile receiver lets you mount more than just bags. From sports equipment to your favorite cooler, the possibilities are endless.</span></div>
+                        <div style="min-width:195px; max-width:10%; white-space: nowrap; font-style: italic;"><span>THE RECEIVER</span></div>
+                        <div hide-xs hide-sm style="min-width:75px; max-width:10%;">
+                            <p>—</p>
+                        </div>
+                        <div flex><span>Mates perfectly to the peg providing a solid mount for your stuff!</span></div>
                     </div>
                 </div>
                 <div hide-xs hide-sm flex=5></div>
                 <div hide-gt-sm style="height:100px"></div>
                 <div flex-gt-sm=35>
-                    <div style="height:360px;">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZqZ9f89Xgcg" frameborder="0" allowfullscreen></iframe>
+                    <div style="height:400px;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FGIFFYpZfK8?rel=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

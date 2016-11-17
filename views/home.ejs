@@ -38,6 +38,7 @@
     <script type='text/javascript' src="../scripts/home_controller.js"></script>
     <script type='text/javascript' src="../scripts/product_controller.js"></script>
     <script type='text/javascript' src="../scripts/purchase_controller.js"></script>
+    <script type='text/javascript' src="../scripts/footer_controller.js"></script>
     <script type='text/javascript' src="../scripts/dropdown-controller.js"></script>
     <script type='text/javascript' src="../scripts/shrike-header-controller.js"></script>
 
@@ -46,8 +47,22 @@
 <body ng-app="shrike-app" style="background-color: #000000">
 
     <shrike-header></shrike-header>
-    
-    <div ng-view></div>
+
+    <div style="min-height:100%; background-color: #000000">
+        <div ng-view></div>
+    </div>
+
+    <div layout-xs="column" layout="row" id="footer" ng-controller="footer_controller">
+        <div layout="column" layout-align-xs="start center" style="height:100%; padding-top:20px">
+            <span ng-click="go('/contact')">Contact Us</span>
+            <span ng-click="go('/patents')">Intellectual Property Notice</span>
+        </div>
+        <div flex></div>
+        <div layout="column" layout-align-xs="start center" layout-align="start end" style="height:100%; padding-top:20px">
+            <img src="../images/finallogo_black.png" style="width:200px;">
+            <span style="padding-top:10px;">© 2016 Blackbird Dynamics, LLC</span>
+        </div>
+    </div>
 
 </body>
 

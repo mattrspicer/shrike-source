@@ -1,13 +1,33 @@
 <div ng-controller="home_controller">
     
-    <div layout="row" style="background-color: #000000; padding-top:20px; padding-bottom:120px">
+    <div layout="row" style="background-color: #000000; padding-top:20px; padding-bottom:120px; padding-left:10%; padding-right:10%" hide-xs hide-sm>
         <div flex>
-            <div id="mission-taglines" flex-gt-xs="60" layout-align-xs="center enter" style="padding-left:10%">
+            <div id="mission-taglines" layout-align-xs="center enter">
                 <p class="mission-impact-text" style="line-height: 45px; padding-bottom:10px;">
                     RIDE A SPORT BIKE? <br/><br/>
                     HAUL YOUR GEAR WITHOUT TRASHING YOUR RIDE<br/>
                 </p>
-                <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#BAD8DB;" ng-click="go('/product')">
+                <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#A6CAD0;" ng-click="go('/product')">
+                    <span style="font-size:12px; font-family: 'PT Sans'; font-style:italic; font-weight:bold;">LEARN MORE</span>
+                </md-button>
+            </div>
+        </div>
+        <div>
+            <img src="../images/home_page_james_riding.jpg" style="max-width:520px">
+        </div>
+    </div>
+    
+    <div layout="column" style="background-color: #000000; padding-top:20px; padding-bottom:120px; padding-left:10%; padding-right:10%" hide-gt-sm>
+        <div>
+            <img src="../images/home_page_james_riding.jpg" style="width:100%">
+        </div>
+        <div flex style="padding-top:30px">
+            <div id="mission-taglines" layout-align-xs="center enter">
+                <p class="mission-impact-text" style="line-height: 45px; padding-bottom:10px;">
+                    RIDE A SPORT BIKE? <br/><br/>
+                    HAUL YOUR GEAR WITHOUT TRASHING YOUR RIDE<br/>
+                </p>
+                <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#A6CAD0;" ng-click="go('/product')">
                     <span style="font-size:12px; font-family: 'PT Sans'; font-style:italic; font-weight:bold;">LEARN MORE</span>
                 </md-button>
             </div>
@@ -21,7 +41,7 @@
                 <ul style="font-family: 'PT Sans'; font-size:17px; line-height: 24px">
                     <li><span class="list-items">Design won’t compromise the silhouette of your bike.</span></li>
                     <li><span class="list-items">Mount doesn’t touch your bike’s bodywork - there won’t be any scratching or damage.</span></li>
-                    <li><span class="list-items">No visible mounting brackets means that the bike still look good without the bags on.</span></li>
+                    <li><span class="list-items">No visible mounting brackets means that the bike still looks good without the bags on.</span></li>
                 </ul>
             </div>
         </div>
@@ -30,8 +50,8 @@
             <h class="mission-impact-text">PRACTICAL</h>
             <ul style="font-family: 'PT Sans'; font-size:17px; line-height: 24px">
                 <li><span class="list-items">Easy to install on your own.</span></li>
-                <li><span class="list-items">Bags are easily added or removed once system is attached.</span></li>
-                <li><span class="list-items">Even weight distribution allows for easy, smooth handling.</span></li>
+                <li><span class="list-items">Bags are easily added or removed once the system is attached.</span></li>
+                <li><span class="list-items">Minimizes the impact of bags or luggage on handling.</span></li>
             </ul>
         </div>
         <div show-gt-sm style="width:13%"></div>
@@ -39,7 +59,7 @@
             <h class="mission-impact-text">VERSATILE</h>
             <ul style="font-family: 'PT Sans'; font-size:17px; line-height: 24px">
                 <li><span class="list-items">Flexible carrying capability means that you can mount more than just your bags.</span></li>
-                <li><span class="list-items">Curently available for a variety of bikes and continuing to expand.</span></li>
+                <li><span class="list-items">Designed to fit a wide range of sport bikes.</span></li>
             </ul>
         </div>
     </div>
@@ -58,7 +78,7 @@
                         <p>SHRIKE MOUNTS SYSTEM</p>
                     </th>
                     <th style="font-weight:normal; border-right: 4px solid; border-color:white;">
-                        <p class="table-heading-text">STANDARD SADDLE BAGS</p>
+                        <p class="table-heading-text">STANDARD SADDLEBAGS</p>
                     </th>
                     <th style="font-weight:normal;">
                         <p class="table-heading-text">RACK-BASED SYSTEM</p>

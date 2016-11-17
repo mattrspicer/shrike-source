@@ -65,7 +65,7 @@ html {
 
 .headerButtonText {
     font-family: 'PT Sans';
-    font-size: 19px;
+    font-size: 17px;
 }
 
 .md-button.headerButton:hover {   
@@ -314,6 +314,16 @@ th {
     padding: 0px;
     margin: 0px 0px 0px 0px;
     background-color: #DDDDDD;
+}
+
+#footer {
+    height:150px;
+    background-color: white;
+    color:black;
+    font-family: 'PT Sans';
+    font-size: 15px;
+    padding-left: 10%;
+    padding-right: 10%
 }
 
 ::-webkit-input-placeholder {

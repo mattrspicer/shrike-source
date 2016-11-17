@@ -5,7 +5,7 @@ shrikeApp.controller('contact_controller', function($scope, $mdMenu, $http, $win
     $scope.submit = function() {
         var post_user = $http({
             method: "post",
-            url: './trialusers',
+            url: 'https://script.google.com/macros/s/AKfycbx8L88dArKdzYMYazrhx82qA2s4mTzj4vqqJzH8BPzrzJoZZlj3/exec',
             data: {
                 email: $scope.user.email,
                 name: $scope.user.name,
