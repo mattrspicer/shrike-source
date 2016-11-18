@@ -11,9 +11,9 @@ shrikeApp.config(function($routeProvider, $locationProvider) {
         .when('/contact', {
             templateUrl: './templates/contact.html'
         })
-        .when('/product', {
-            templateUrl: './templates/product.html'
-        })
+        // .when('/product', {
+        //     templateUrl: './templates/product.html'
+        // })
         .when('/purchase', {
             templateUrl: './templates/purchase.html'
         })

@@ -1,7 +1,7 @@
-<div ng-controller="product_controller">
+<div ng-controller="product_controller" style="padding-left:14%; padding-right:14%">
 
     <!-- Carousel for Non-mobile -->
-    <div style="height:475px; background-color: #000000; padding-left:10%; padding-right:10%; padding-bottom:30px" hide-xs hide-sm>
+    <div style="height:475px; background-color: #000000; padding-bottom:30px" hide-xs hide-sm>
         <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" style="height:100%">
             <div ng-repeat="slide in slides" uib-slide index="$index" style="background-color:black; padding-bottom:70px">
                 <div layout-xs="column" layout-sm="column" layout="row">
@@ -27,7 +27,7 @@
     </div>
     
     <!-- Carousel for Mobile -->
-    <div style="height:700px; background-color: #000000; padding-left:10%; padding-right:10%; padding-bottom:30px" hide-gt-sm>
+    <div style="height:700px; background-color: #000000; padding-bottom:30px" hide-gt-sm>
         <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" style="height:100%">
             <div ng-repeat="slide in slides" uib-slide index="$index" style="background-color:black; padding-bottom:70px">
                 <div layout="column" layout-align="center center" style="padding-top:40px;">
@@ -54,7 +54,7 @@
 
     <!-- Installation Instructions -->
     <div layout="column">
-        <div layout="column" layout-align="center" style="background-color: #A6CAD0; padding-left:7%; padding-right:7%; height:140px">
+        <div layout="column" layout-align="center" style="background-color: #A6CAD0; height:140px">
             <span class="mission-impact-text" style="font-size:45px; font-weight:900; font-style:italic;">
                 INSTALL IN 4 EASY STEPS
             </span>
@@ -81,7 +81,7 @@
 
     <!-- Key Facts About the Product -->
     <div layout="column">
-        <div layout="column" layout-align="center" style="background-color: #262626; padding-left:7%; padding-right:7%; height:140px">
+        <div layout="column" layout-align="center" style="background-color: #262626; height:140px">
             <span class="mission-impact-text" style="font-size:45px; font-weight:900; font-style:italic;">
                 ABOUT THE SYSTEM
             </span>
