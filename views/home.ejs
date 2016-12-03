@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Narrow" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/toastr.css"/>
 
     <!-- Angular Libraries -->
     <script src="./angular/angular.js"></script>
@@ -25,10 +26,13 @@
 
     <!-- Angular Material Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-
+    
     <!-- Bootstrap -->
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.4.js"></script>
     <link href="../stylesheets/bootstrap.css" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
     <!-- Scripts -->
     <script type='text/javascript' src="../scripts/shrike-app.js"></script>
@@ -41,29 +45,38 @@
     <script type='text/javascript' src="../scripts/footer_controller.js"></script>
     <script type='text/javascript' src="../scripts/dropdown-controller.js"></script>
     <script type='text/javascript' src="../scripts/shrike-header-controller.js"></script>
+    <script type='text/javascript' src="../scripts/google_sheets_auth_test.js"></script>
+    <script type='text/javascript' src="../scripts/externals/toastr.min.js"></script>
+    <script type='text/javascript' src="../scripts/externals/angular-preload-image.js"></script>
 
 </head>
 
-<body ng-app="shrike-app" style="background-color: #000000">
-
-    <shrike-header></shrike-header>
-
-    <div style="min-height:100%;">
-        <div ng-view></div>
-    </div>
-
-    <div layout-xs="column" layout="row" id="footer" ng-controller="footer_controller">
-        <div layout="column" layout-align-xs="start center" style="height:100%; padding-top:20px">
-            <span ng-click="go('/contact')">Contact Us</span>
-            <span ng-click="go('/patents')">Intellectual Property Notice</span>
+<body ng-app="shrike-app" style="background:#e6e6e6 ">
+    <div style="max-width:1400px; min-height:100%; margin: 0 auto; background-color:white" layout="column">
+        <!-- Header -->
+        <shrike-header></shrike-header>
+        
+        <!-- Page Content -->
+        <div flex style="background:black">
+            <div ng-view></div>
         </div>
-        <div flex></div>
-        <div layout="column" layout-align-xs="start center" layout-align="start end" style="height:100%; padding-top:20px">
-            <img src="../images/finallogo_black.png" style="width:200px;">
-            <span style="padding-top:10px;">© 2016 Blackbird Dynamics, LLC</span>
+
+        <!-- Footer -->
+        <div>
+            <div style="height:5px; background-color:grey; width:100%"></div>
+            <div layout-xs="column" layout="row" id="footer" ng-controller="footer_controller">
+                <div layout="column" layout-align-xs="start center" style="height:100%; padding-top:20px">
+                    <span ng-click="go('/contact')">Contact Us</span>
+                    <span ng-click="go('/patents')">Intellectual Property Notice</span>
+                </div>
+                <div flex></div>
+                <div layout="column" layout-align-xs="start center" layout-align="start end" style="height:100%; padding-top:20px">
+                    <img src="../images/finallogo_black.png" style="width:200px; min-height:70px">
+                    <span style="padding-top:10px;">© 2016 Blackbird Dynamics, LLC</span>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 
 

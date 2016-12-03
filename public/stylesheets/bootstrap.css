@@ -6433,8 +6433,11 @@ button.close {
 }
 
 .right.carousel-control, .left.carousel-control {
-    opacity: 0;
-    filter:alpha(opacity=0); /* IE support */
+  color:white;
+}
+
+.right.carousel-control:hover, .left.carousel-control:hover {
+  color:white;
 }
 
 @media screen and (min-width: 768px) {

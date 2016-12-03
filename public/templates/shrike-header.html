@@ -1,42 +1,39 @@
-<div layout="row" layout-xs="column" layout-sm="column" style="padding: 5%; background-color:#000000">
+<div layout="row" layout-xs="column" layout-sm="column" style="padding:5%; background-color:#000000">
 
-     <!--logo -->
+    <!--logo -->
     <div layout-sm="column" layout-align-sm="center center" layout-xs="column" layout-align-xs="center center" flex-sm>
-        <img src="../images/finallogo_grey.png" style="width:260px; min-width:260px; ">
+        <img src="../images/finallogo_grey.png" style="width:260px; min-width:260px; " ng-click="go('/')">
     </div>
-    
+
     <!--padding for when the buttons are under the logo-->
     <div style="height:30px"></div>
-    
-    <!-- buttons -->
+
+    <!--buttons -->
     <div id="button bar" layout="row" layout-align="end center" layout-align-sm="center center" layout-xs="column" layout-align-xs="center center" flex>
-            <md-button class="headerButton" ng-click="go('/')">
-                <span class="headerButtonText">HOME</span>
-            </md-button>
-        
-            <md-button class="headerButton" ng-click="go('/product')">
-                <span class="headerButtonText">PRODUCT</span>
-            </md-button>
 
-            <md-button class="headerButton"  ng-click="go('/about')">
-                <span class="headerButtonText">ABOUT</span>
-                <a href="#about"></a>
-            </md-button>
-            
-            <!--<md-button class="headerButton" ng-click="toPurchaseForm()">-->
-            <!--    <span class="headerButtonText">PURCHASE</span>-->
-            <!--</md-button>-->
+        <md-button class="headerButton" ng-click="go('/product')">
+            <span class="headerButtonText">PRODUCT</span>
+        </md-button>
 
-            <md-button class="headerButton" ng-click="go('/contact')">
-                <span class="headerButtonText">CONTACT</span>
-            </md-button>
-            
-            <md-button class="headerButton" ng-click="go('/patents')">
-                <span class="headerButtonText">PATENT</span>
-            </md-button>
-        
+        <md-button class="headerButton" ng-click="go('/about')">
+            <span class="headerButtonText">ABOUT</span>
+            <a href="#about"></a>
+        </md-button>
+
+        <!--<md-button class="headerButton" ng-click="toPurchaseForm()">-->
+        <!--    <span class="headerButtonText">PURCHASE</span>-->
+        <!--</md-button>-->
+
+        <md-button class="headerButton" ng-click="go('/contact')">
+            <span class="headerButtonText">CONTACT</span>
+        </md-button>
+
+        <md-button class="headerButton" ng-click="go('/patents')">
+            <span class="headerButtonText">PATENT</span>
+        </md-button>
+
     </div>
-    
+
     <div style="height:30px" show-xs></div>
 
 </div>

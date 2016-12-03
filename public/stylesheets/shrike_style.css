@@ -1,5 +1,5 @@
 html {
-    background-color: white;
+    background-color: #e6e6e6 ;
 }
 
 .mobile-header {
@@ -208,7 +208,7 @@ md-input-container.md-default-theme label,
 .mission-impact-text {
     color: #FFFFFF;
     font-family: 'PT Sans';
-    font-size: 35px;
+    font-size: 30px;
     font-weight:bold;
 }
 
@@ -248,9 +248,10 @@ th {
 }
 
 .table-text {
+    font-size:18px;
     padding-left:35px;
-    padding-top:15px;
-    padding-bottom:15px;
+    padding-top:8px;
+    padding-bottom:8px;
 }
 
 .home-slides-desktop {
@@ -296,9 +297,9 @@ th {
 
 .body-text {
     font-family: PT Sans;
-    font-size: 20px;
+    font-size: 17px;
     color:white;
-    line-height: 34px;
+    line-height: 27px;
 }
 
 .form-label {
@@ -316,6 +317,10 @@ th {
     background-color: #DDDDDD;
 }
 
+.toast {
+    opacity: 1 !important;
+}
+
 #footer {
     height:150px;
     background-color: white;
@@ -324,6 +329,16 @@ th {
     font-size: 15px;
     padding-left: 10%;
     padding-right: 10%
+}
+
+.container-pane {
+    width:100%;
+}
+
+.content-pane {
+    width:100%;
+    padding-left: 12.5%;
+    padding-right:12.5%;
 }
 
 ::-webkit-input-placeholder {

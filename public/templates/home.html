@@ -1,44 +1,50 @@
-<div ng-controller="home_controller" style="width:100%; padding-left:14%; padding-right:14%">
-    
-    <div layout="row" style="background-color: #000000; padding-top:20px; padding-bottom:120px;" hide-xs hide-sm>
-        <div flex>
-            <div id="mission-taglines" layout-align-xs="center enter">
-                <p class="mission-impact-text" style="line-height: 45px; padding-bottom:10px;">
-                    RIDE A SPORT BIKE? <br/><br/>
-                    HAUL YOUR GEAR WITHOUT TRASHING YOUR RIDE<br/>
+<div ng-controller="home_controller" style="width:100%;">
+
+    <!-- Call to Action -->
+
+    <!-- Regular -->
+    <div layout="row" class="content-pane" style="background-color: #000000; padding-top:20px; padding-bottom:120px;" hide-xs hide-sm hide-md>
+        <div style="min-width:480px; padding-right:20px">
+            <div layout-align-xs="center enter">
+                <p class="mission-impact-text" style="line-height: 45px;">
+                    RIDE A SPORT BIKE? <br/> HAUL YOUR GEAR WITHOUT TRASHING YOUR RIDE<br/>
+                </p>
+                <p class="body-text" style="white-space:nowrap; padding-bottom:15px">
+                    The Shrike Mounts system is an innovative way to <br>
+                    mount saddlebags or other luggage to your sportbike <br>
+                    without touching the bodywork or using ugly brackets. <br/>
                 </p>
                 <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#A6CAD0;" ng-click="go('/product')">
                     <span style="font-size:12px; font-family: 'PT Sans'; font-style:italic; font-weight:bold;">LEARN MORE</span>
                 </md-button>
             </div>
         </div>
-        <div>
-            <img src="../images/OEIP_Spin-In-Motorcycle-036.jpg" style="max-width:520px">
-        </div>
-    </div>
-    
-    <div layout="column" style="background-color: #000000; padding-top:20px; padding-bottom:120px;" hide-gt-sm>
-        <div>
-            <img src="../images/home_page_james_riding.jpg" style="width:100%">
-        </div>
-        <div flex style="padding-top:30px">
-            <div id="mission-taglines" layout-align-xs="center enter">
-                <p class="mission-impact-text" style="line-height: 45px; padding-bottom:10px;">
-                    RIDE A SPORT BIKE? <br/><br/>
-                    HAUL YOUR GEAR WITHOUT TRASHING YOUR RIDE<br/>
-                </p>
-                <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#A6CAD0;" ng-click="go('/product')">
-                    <span style="font-size:12px; font-family: 'PT Sans'; font-style:italic; font-weight:bold;">LEARN MORE</span>
-                </md-button>
-            </div>
+        <div style="min-width:450px; width:450px; min-height:290px; height:290px">
+            <img preload-image ng-src="../images/gallery/OEIP_Spin-In-Motorcycle-002.jpg" default-image="../images/gallery/OEIP_Spin-In-Motorcycle-002 default.jpg" style="width:100%; height:100%"/>
         </div>
     </div>
 
-    <div style="background-color: #A6CAD0; padding-top:70px; padding-bottom:100px;" layout="column" layout-gt-sm="row">
+    <!-- Mobile -->
+    <div class="content-pane" style="background-color: #000000; padding-top:20px; padding-bottom:120px; margin: 0 auto" hide-gt-md>
+        <img preload-image ng-src="../images/gallery/OEIP_Spin-In-Motorcycle-002.jpg" default-image="../images/gallery/OEIP_Spin-In-Motorcycle-002 default.jpg" style="width:70%"/>
+        <div style="padding-top:60px">
+            <p class="mission-impact-text" style="line-height: 45px; padding-bottom:10px;">
+                RIDE A SPORT BIKE? <br/> HAUL YOUR GEAR WITHOUT TRASHING YOUR RIDE<br/>
+            </p>
+            <p class="body-text">
+                The Shrike Mounts system is an innovative way to mount saddlebags or other luggage to your sportbike without touching the bodywork or using ugly brackets. <br/><br/>
+            </p>
+            <md-button md-no-ink style="margin:0px; max-height:10px; border-radius:10px; color:white; background-color:#A6CAD0;" ng-click="go('/product')">
+                <span style="font-size:12px; font-family: 'PT Sans'; font-style:italic; font-weight:bold;">LEARN MORE</span>
+            </md-button>
+        </div>
+    </div>
+
+    <div class="content-pane" style="background-color: #A6CAD0; padding-top:70px; padding-bottom:100px;" layout="column" layout-gt-sm="row">
         <div flex style="padding-top:30px">
             <h class="mission-impact-text" style="white-space: nowrap">SLICK DESIGN</h>
             <div>
-                <ul style="font-family: 'PT Sans'; font-size:17px; line-height: 24px">
+                <ul style="font-family: 'PT Sans'; font-size:15px; line-height: 24px">
                     <li><span class="list-items">Design won’t compromise the silhouette of your bike.</span></li>
                     <li><span class="list-items">Mount doesn’t touch your bike’s bodywork - there won’t be any scratching or damage.</span></li>
                     <li><span class="list-items">No visible mounting brackets means that the bike still looks good without the bags on.</span></li>
@@ -48,7 +54,7 @@
         <div show-gt-sm style="width:13%"></div>
         <div flex style="padding-top:30px">
             <h class="mission-impact-text">PRACTICAL</h>
-            <ul style="font-family: 'PT Sans'; font-size:17px; line-height: 24px">
+            <ul style="font-family: 'PT Sans'; font-size:15px; line-height: 24px">
                 <li><span class="list-items">Easy to install on your own.</span></li>
                 <li><span class="list-items">Bags are easily added or removed once the system is attached.</span></li>
                 <li><span class="list-items">Minimizes the impact of bags or luggage on handling.</span></li>
@@ -57,14 +63,15 @@
         <div show-gt-sm style="width:13%"></div>
         <div flex style="padding-top:30px">
             <h class="mission-impact-text">VERSATILE</h>
-            <ul style="font-family: 'PT Sans'; font-size:17px; line-height: 24px">
+            <ul style="font-family: 'PT Sans'; font-size:15px; line-height: 24px">
                 <li><span class="list-items">Flexible carrying capability means that you can mount more than just your bags.</span></li>
                 <li><span class="list-items">Designed to fit a wide range of sport bikes.</span></li>
             </ul>
         </div>
     </div>
 
-    <div style="background-color: #BADADD;" layout="column" hide-xs>
+    <div class="content-pane" style="background-color: #BADADD;" layout="column" hide-xs>
+        
         <div style="padding-top:100px">
             <h class="mission-impact-text" style="color:#808080">SET APART FROM THE COMPETITION</h>
             <div style="background-color:white; height:2px; width:70%;"></div>
@@ -88,7 +95,7 @@
                     <td style="border-left:0px; border-right:0px;">
                         <p class="table-text">EASY TO INSTALL</p>
                     </td>
-                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:40px; height:40px"></td>
+                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:30px; height:30px"></td>
                     <td style="text-align: center;"></td>
                     <td style="border-right:0px;"></td>
                 </tr>
@@ -96,7 +103,7 @@
                     <td style="border-left:0px; border-right:0px;">
                         <p class="table-text">DOESN’T TOUCH BODYWORK</p>
                     </td>
-                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:40px; height:40px"></td>
+                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:30px; height:30px"></td>
                     <td></td>
                     <td style="border-right:0px;"></td>
                 </tr>
@@ -104,7 +111,7 @@
                     <td style="border-left:0px; border-right:0px;">
                         <p class="table-text">PRESERVES LOOK OF YOUR BIKE</p>
                     </td>
-                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:40px; height:40px"></td>
+                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:30px; height:30px"></td>
                     <td></td>
                     <td style="border-right:0px;"></td>
                 </tr>
@@ -112,7 +119,7 @@
                     <td style="border-left:0px; border-right:0px;">
                         <p class="table-text">NO VISIBLE MOUNTING BRACKET</p>
                     </td>
-                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:40px; height:40px"></td>
+                    <td style="border-left:0px; text-align: center"><img src="../images/checkmark.png" style="width:30px; height:30px"></td>
                     <td></td>
                     <td style="border-right:0px;"></td>
                 </tr>
@@ -121,8 +128,8 @@
                         <p class="table-text">CAN CARRY PASSENGER WHILE MOUNTED</p>
                     </td>
                     <td style="border-left:0px; border-bottom:0px"></td>
-                    <td style="border-bottom:0px; text-align: center"><img src="../images/checkmark.png" style="width:40px; height:40px"></td>
-                    <td style="border-bottom:0px; text-align: center; border-right:0px;"><img src="../images/checkmark.png" style="width:40px; height:40px"></td>
+                    <td style="border-bottom:0px; text-align: center"><img src="../images/checkmark.png" style="width:30px; height:30px"></td>
+                    <td style="border-bottom:0px; text-align: center; border-right:0px;"><img src="../images/checkmark.png" style="width:30px; height:30px"></td>
                 </tr>
             </table>
         </div>

@@ -11,14 +11,17 @@ shrikeApp.config(function($routeProvider, $locationProvider) {
         .when('/contact', {
             templateUrl: './templates/contact.html'
         })
-        // .when('/product', {
-        //     templateUrl: './templates/product.html'
-        // })
-        .when('/purchase', {
-            templateUrl: './templates/purchase.html'
+        .when('/product', {
+            templateUrl: './templates/product.html'
         })
+        // .when('/purchase', {
+        //     templateUrl: './templates/purchase.html'
+        // })
         .when('/patents', {
             templateUrl: './templates/patents.html'
+        })
+        .when('/test', {
+            templateUrl: './templates/google_sheets_test_auth.html'
         })
         .otherwise({
             redirectTo: '/'
