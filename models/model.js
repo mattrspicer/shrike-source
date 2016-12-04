@@ -1,3 +1,5 @@
+// mongo model - not used by Spicer's verion of Shrike Mounts site
+
 var mongoose = require('mongoose');
 
 var TrialUserSchema = new mongoose.Schema({

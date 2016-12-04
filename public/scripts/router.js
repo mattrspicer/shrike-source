@@ -1,5 +1,6 @@
 var shrikeApp = angular.module('shrike-app');
 
+// angular router - this code establishes the routing for the site
 shrikeApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {

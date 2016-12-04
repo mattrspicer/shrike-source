@@ -2,9 +2,11 @@
 
 var customDirectives = angular.module('customDirectives', ['ngAnimate', 'ngMaterial']);
 
+// declaration of the shrike angular application with all required angular modules
 var shrikeApp = angular.module('shrike-app', ['customDirectives', 'ngAnimate', 'ngMaterial', 'ngSanitize', 'ui.bootstrap', 'ngRoute', 'angular-preload-image'])
     .config(function($mdThemingProvider) {
 
+        // custom angular material color pallete to make the contact us loading screen display as a shrike mounts color
         $mdThemingProvider.definePalette('custom', {
             '50': 'ffebee',
             '100': 'ffffff', // other 

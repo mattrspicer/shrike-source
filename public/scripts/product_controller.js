@@ -1,6 +1,8 @@
 var shrikeApp = angular.module('shrike-app');
 
 shrikeApp.controller('product_controller', function($scope) {
+    
+    // variables to control the carousel at the top of the page
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
     $scope.active = 0;

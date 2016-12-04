@@ -2,58 +2,6 @@ html {
     background-color: #e6e6e6 ;
 }
 
-.mobile-header {
-    background-color: #9B201F;
-    min-height:55px;
-    max-height:55px;
-}
-
-.desktop-header {
-    background-color: #68160D;
-    min-height:80px;
-    max-height:80px;
-
-}
-
-#mobile-logo {
-    position: absolute;
-    height: 160px;
-    width:200px;
-    top: 36px;
-    left: 50%;
-    margin-left:-100px;
-}
-
-#desktop-logo {
-    padding-top:10px;
-    padding-left:20px;
-    max-width:250px;
-    min-width:250px;
-    max-height:70px;
-    min-height:70px;
-}
-
-.md-button.arrowButton {
-    background-color: #959595;
-    min-width: 40px !important;
-    width: 6%;
-    position:absolute;
-    z-index: 2;
-    opacity:0.3;
-    display:inline-block;
-    padding: 0;
-    margin:0;
-    height:100%;
-}
-
-#leftSliderArrow {
-    left:0px;
-}
-
-#rightSliderArrow {
-    right:0;
-}
-
 .md-button.headerButton {
     background-color: #000000;
     color: white;
@@ -83,127 +31,6 @@ html {
     background-color: rgba(255, 255, 255, 1.0);
 }
 
-.arrow {
-    width: 20px;
-}
-
-.slider-container {
-    padding-top:2.5%;
-    padding-left:5%;
-    padding-right:5%;
-    padding-bottom:2.5%;
-}
-
-.slider {
-    width:90vw;
-    min-width:879.3px;
-    height:40vw;
-    min-height:390.8px;
-    margin: 0 auto;
-    position: relative;
-    padding:0px;
-    display:inline-block;
-}
-
-.slide {
-    width:100%;
-    margin: 0 auto;
-    position:relative;
-    display:inline-block;
-    z-index: 1;
-}
-
-
-.text {
-    font-family: 'PT Sans';
-    color: #323131;
-    font-size: 16px;
-    margin: 0 auto;
-}
-
-.contentSubheader {
-    font-family: 'PT Sans';
-    font-size: 16px;
-    font-style: italic;
-    /*font-weight: bold;*/
-    color:#959595;
-}
-
-.md-button.contentButton {
-    background-color: #959595;
-    color: white;
-    position: absolute;
-    margin-left:0;
-    padding:0px;
-    bottom:0;
-    min-height:50px;
-    font-style: italic;
-}
-
-.contentButtonText {
-    font-family: 'PT Sans';
-    font-size: 16px;
-    padding:25px;
-}
-
-.footer {
-    height:60px;
-    background-color:#323131;
-}
-
-.footer-divider {
-    /*padding-top:5%;*/
-    min-height:3%;
-    background-color: #222222;
-}
-
-.socialMediaButton {
-    min-height:35px;
-    height:35px;
-    min-width:35px;
-    width:35px;
-}
-
-#facebook {
-    right:80%;
-    position:absolute;
-}
-
-#video {
-    padding-top:20px;
-    max-width:80%;
-    min-height:100px;
-}
-
-#mobileHome { 
-     height:100%;
-     width:100%;
- }
- 
-.md-button.mobileMenuButton {
-    min-height:40px !important;
-    max-height:40px !important;
-    min-width:40px !important;
-    max-width:40px !important;
-}
-
-.hamburger {
-    height: 30px;
-    width: 30px;
-}
-
-md-checkbox.md-default-theme.md-checked ._md-icon, md-checkbox.md-checked ._md-icon {
-    background-color: #9B201F !important;
-}
-
-md-input-container.md-default-theme label, 
- md-input-container.md-default-theme .md-placeholder{
-    background-color:orange !important;
-}
-
-.md-input-container.md-input-has-placeholder {
-    background-color: orange !important;
-}
 
 .mission-impact-text {
     color: #FFFFFF;
@@ -254,46 +81,6 @@ th {
     padding-bottom:8px;
 }
 
-.home-slides-desktop {
-    /*height:350px;*/
-    /*width:1000px;*/
-    max-height: 350px;
-    min-width:750px;
-    height:100%;
-    width:100%;
-    margin:auto;
-}
-
-.home-slides-mobile {
-    /*height:350px;*/
-    /*width:1000px;*/
-    max-width:500px;
-    height:100%;
-    width:100%;
-    margin:auto;
-}
-
-.home-slide-pullout {
-    font-family: PT Sans;
-    font-weight: bold;
-    font-size: 35.99px;
-    line-height: 45.33px;
-    color: white;
-}
-
-.home-slide-body {
-    font-family: PT Sans;
-    font-size: 21.33px;
-    line-height: 28px;
-    color: white;
-}
-
-.home-slide-quote {
-    font-family: PT Sans;
-    font-size: 93.33px;    
-    color:#BAD8DB;
-    line-height: 50px;
-}
 
 .body-text {
     font-family: PT Sans;
@@ -339,6 +126,18 @@ th {
     width:100%;
     padding-left: 12.5%;
     padding-right:12.5%;
+}
+
+.contact-input {
+    background: #CCCBCB; 
+    border-radius: 20px; 
+    width:75%; 
+    border-style:solid; 
+    padding-left:15px; 
+    padding-right:15px; 
+    font-family: PT Sans; 
+    font-size: 15px; 
+    color:black
 }
 
 ::-webkit-input-placeholder {
