@@ -40,7 +40,7 @@ shrikeApp.controller('contact_controller', function($scope, $mdMenu, $http, $win
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
                 }
-                var destination = 'https://script.google.com/macros/s/AKfycbx66PacR2gXE_b9aHX9yI7pQ9-CS5QVYp6cJkSSxEa4Js7fCDMJ/exec?callback=JSON_CALLBACK';
+                var destination = 'https://script.google.com/macros/s/AKfycbyfpbxU9GtBVCSyGhBWGuPdJuOpDe-WIWlwWwywtQWt5yZ83yZ2/exec?callback=JSON_CALLBACK';
                 destination = destination + '&name=' + $scope.user.name + '&email=' + $scope.user.email;
                 $scope.loading = true;
                 $http.jsonp(destination).then(success, fail);
