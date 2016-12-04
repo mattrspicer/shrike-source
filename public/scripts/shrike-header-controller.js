@@ -7,7 +7,7 @@ customDirectives.controller('shrike-header.controller', function($scope, $mdMenu
 
   // sends the user to the shrike mounts purchase form
   $scope.toPurchaseForm = function() {
-    $window.open("https://goo.gl/forms/UWn9852zTglkFz1l2");
+    $window.open("https://docs.google.com/forms/d/e/1FAIpQLSf9svL8Luzsl9Q12g8xQQSf1j4uoTyU_7o89AQly_FD_pXnfA/viewform");
   }
 
 });
