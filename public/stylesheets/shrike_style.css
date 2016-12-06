@@ -110,6 +110,7 @@ th {
 
 #footer {
     height:150px;
+    max-height: 150px;
     background-color: white;
     color:black;
     font-family: 'PT Sans';
