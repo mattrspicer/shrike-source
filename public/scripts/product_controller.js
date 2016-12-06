@@ -8,7 +8,7 @@ shrikeApp.controller('product_controller', function($scope) {
     $scope.active = 0;
     var currIndex = 0;
     
-    /* User feedback Slides */
+    /* USER FEEDBACK SLIDES */
     
     $scope.slides = [];
     
@@ -35,7 +35,5 @@ shrikeApp.controller('product_controller', function($scope) {
         rider_name: "Jamie \n GSXR750"
     };
     $scope.slides.push(slide3);
-    
-    
     
 });
