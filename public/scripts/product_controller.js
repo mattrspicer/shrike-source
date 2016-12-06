@@ -1,5 +1,4 @@
 var shrikeApp = angular.module('shrike-app');
-
 shrikeApp.controller('product_controller', function($scope) {
     
     /* USER FEEDBACK SLIDES */
