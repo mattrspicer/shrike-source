@@ -28,4 +28,5 @@ shrikeApp.controller('product_controller', function($scope) {
     };
     $scope.slides.push(slide3);
     
+    
 });
